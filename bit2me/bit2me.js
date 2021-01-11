@@ -23,11 +23,15 @@ const requestOptions = {
   gzip: true 
   
 };
+function bucle (){
+  
 
 rp(requestOptions).then(response => {
   console.log('API call response: \n', text(response));
+  
 }).catch((err) => {
   console.log('API call error:', err.message);
   
 })
-
+}
+setInterval(bucle, 60000);
